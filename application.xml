@@ -1,0 +1,8 @@
+db: 
+  connection: "Oracle"
+  host: "192.168.10.47"
+  port: "8080"
+  
+app:
+  name: My App from spring config server
+  description: Welcome to ${app.name}
