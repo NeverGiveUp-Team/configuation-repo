@@ -1,15 +1,12 @@
 spring:
-   dbConfigService: 
-      driverClassName: com.mysql.jdbc.Driver
-      url: "aws-microservices.c3ndra4i4u7s.us-east-1.rds.amazonaws.com"
-      password: "admin123"
-      username: "admin"
-      port:3306
-      testOnBorrow: true
-      testWhileIdle: true
-      timeBetweenEvictionRunsMillis: 60000
-      minEvictableIdleTimeMillis: 30000
-      validationQuery: SELECT 1
-      max-active: 15
-      max-idle: 10
-      max-wait: 8000
+  datasource:
+    username: "admin"
+    password: "admin123"
+    url: "aws-microservices.c3ndra4i4u7s.us-east-1.rds.amazonaws.com"
+  jpa:
+    properties:
+      hibernate:
+        dialect: "org.hibernate.dialect.MySQL5InnoDBDialect"
+    hibernate:
+      ddl-auto: "create"
+
